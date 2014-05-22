@@ -3,7 +3,7 @@
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>NServiceBus.NLog</id>
     <title>NServiceBus NLog</title>
-    <version>%version%</version>
+    <version>$version$</version>
     <authors>NServiceBus Ltd</authors>
     <owners>Udi Dahan, Andreas Ohlund, John Simons</owners>
     <licenseUrl>http://particular.net/LicenseAgreement</licenseUrl>
@@ -14,6 +14,9 @@
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2010-2014 NServiceBus. All rights reserved</copyright>
     <tags>nservicebus servicebus msmq cqrs publish subscribe NLog</tags>
-    <dependencies/>
+    <dependencies>
+      <dependency id="NServiceBus" />
+      <dependency id="NLog" />
+    </dependencies>
   </metadata>
 </package>
