@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 
 [assembly: AssemblyTitle("NServiceBus NLog integration")]
 [assembly: AssemblyDescription("Implementation of logging functionality on top of NLog.")]
