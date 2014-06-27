@@ -1,8 +1,9 @@
 ﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
+using NServiceBus.NLog;
 
-class LoggingConfig
+public class LoggingConfig
 {
     public static void ConfigureNLog()
     {
@@ -30,5 +31,7 @@ class LoggingConfig
         config.LoggingRules.Add(new LoggingRule("*", LogLevel.Debug, fileTarget));
 
         LogManager.Configuration = config;
+
+        NLogConfigurator.Configure();
     }
 }
