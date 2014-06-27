@@ -15,8 +15,8 @@
     <copyright>Copyright 2010-2014 NServiceBus. All rights reserved</copyright>
     <tags>nservicebus servicebus msmq cqrs publish subscribe NLog</tags>
     <dependencies>
-      <dependency id="NServiceBus" />
-      <dependency id="NLog" />
+      <dependency id="NServiceBus" version="5.0" />
+      <dependency id="NLog"  version="3.0" />
     </dependencies>
   </metadata>
 </package>

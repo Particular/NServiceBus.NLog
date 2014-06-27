@@ -52,6 +52,7 @@
     <Compile Include="ActionTarget.cs" />
     <Compile Include="ConfigErrorQueue.cs" />
     <Compile Include="IntegrationTests.cs" />
+    <Compile Include="LogMessageCapture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
