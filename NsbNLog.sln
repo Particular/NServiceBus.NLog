@@ -5,11 +5,7 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.NLog", "NServiceBus.NLog\NServiceBus.NLog.csproj", "{E21E4D64-7077-4D6C-81F3-2B6E5CAB9EB1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{44C1C7BB-3A63-4909-9DCC-9E614335788E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHost", "SelfHost\SelfHost.csproj", "{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NsbHost", "NsbHost\NsbHost.csproj", "{1F138DF7-E98F-4279-954E-8E1D87621E2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,16 +21,8 @@ Global
 		{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F138DF7-E98F-4279-954E-8E1D87621E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F138DF7-E98F-4279-954E-8E1D87621E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F138DF7-E98F-4279-954E-8E1D87621E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F138DF7-E98F-4279-954E-8E1D87621E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B} = {44C1C7BB-3A63-4909-9DCC-9E614335788E}
-		{1F138DF7-E98F-4279-954E-8E1D87621E2E} = {44C1C7BB-3A63-4909-9DCC-9E614335788E}
 	EndGlobalSection
 EndGlobal

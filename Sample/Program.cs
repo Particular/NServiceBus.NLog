@@ -10,10 +10,9 @@ class ProgramService : ServiceBase
         LoggingConfig.ConfigureNLog();
 
         var configure = Configure.With(builder => builder.EndpointName(() => "SelfHost"));
-        configure.DefaultBuilder();
-        configure.Serialization.Json();
+        configure.UseSerialization<Json>();
         configure.UsePersistence<InMemory>();
-        configure.ForInstallationOn();
+        configure.EnableInstallers();
 
         using (var bus = configure.CreateBus())
         {
