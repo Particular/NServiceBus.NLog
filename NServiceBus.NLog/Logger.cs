@@ -34,7 +34,7 @@
 
         public void Info(string message, Exception exception)
         {
-            logger.InfoException(message, exception);
+            logger.Info(message, exception);
         }
 
         public void InfoFormat(string format, params object[] args)
@@ -49,7 +49,7 @@
 
         public void Warn(string message, Exception exception)
         {
-            logger.WarnException(message, exception);
+            logger.Warn(message, exception);
         }
 
         public void WarnFormat(string format, params object[] args)
@@ -64,7 +64,7 @@
 
         public void Error(string message, Exception exception)
         {
-            logger.ErrorException(message, exception);
+            logger.Error(message, exception);
         }
 
         public void ErrorFormat(string format, params object[] args)
@@ -79,7 +79,7 @@
 
         public void Fatal(string message, Exception exception)
         {
-            logger.FatalException(message, exception);
+            logger.Fatal(message, exception);
         }
 
         public void FatalFormat(string format, params object[] args)
