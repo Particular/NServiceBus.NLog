@@ -19,7 +19,7 @@
 
         public void Debug(string message, Exception exception)
         {
-            logger.DebugException(message, exception);
+            logger.Debug(message, exception);
         }
 
         public void DebugFormat(string format, params object[] args)
