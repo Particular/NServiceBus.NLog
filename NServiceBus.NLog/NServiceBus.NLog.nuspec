@@ -15,7 +15,7 @@
     <copyright>Copyright 2010-2014 NServiceBus. All rights reserved</copyright>
     <tags>nservicebus NLog</tags>
     <dependencies>
-      <dependency id="NServiceBus" version="5.0-beta1" />
+		  <dependency id="NServiceBus" version="5.0.0-beta0001" />
       <dependency id="NLog"  version="3.0" />
     </dependencies>
   </metadata>
