@@ -81,7 +81,7 @@
     <Copy SourceFiles="$(OutputPath)NServiceBus.NLog.pdb" DestinationFolder="$(SolutionDir)NuGetBuild\Lib\NET45" />
     <Copy SourceFiles="$(OutputPath)NServiceBus.NLog.xml" DestinationFolder="$(SolutionDir)NuGetBuild\Lib\NET45" />
     <Copy SourceFiles="$(ProjectDir)NServiceBus.NLog.nuspec" DestinationFolder="$(SolutionDir)NuGetBuild" />
-    <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuild" MetadataAssembly="$(OutputPath)\NServiceBus.NLog.dll" />
+    <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuild"  Version="$(GfvLegacySemVerPadded)" />
     <Copy SourceFiles="$(ProjectDir)LoggerFactory.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\LoggerFactory.cs.pp" />
     <Copy SourceFiles="$(ProjectDir)Logger.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\Logger.cs.pp" />
     <Copy SourceFiles="$(ProjectDir)NLogConfigurator.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\NLogConfigurator.cs.pp" />
@@ -90,7 +90,7 @@
     </ItemGroup>
     <FileUpdate Files="@(CsFiles)" Regex="namespace NServiceBus.NLog" ReplacementText="namespace $rootnamespace$.NServiceBusNLog" />
     <Copy SourceFiles="$(ProjectDir)NServiceBus.NLog-CodeOnly.nuspec" DestinationFolder="$(SolutionDir)NuGetBuildCodeOnly\" />
-    <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuildCodeOnly" MetadataAssembly="$(OutputPath)\NServiceBus.NLog.dll" />
+    <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuildCodeOnly" Version="$(GfvLegacySemVerPadded)" />
   </Target>
   <Import Project="..\packages\PepitaPackage.1.20.1.0\build\PepitaPackage.targets" Condition="Exists('..\packages\PepitaPackage.1.20.1.0\build\PepitaPackage.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
