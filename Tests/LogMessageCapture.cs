@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using NLog;
 using NLog.Config;
-using NServiceBus.NLog;
 
 class LogMessageCapture
 {
@@ -18,6 +17,5 @@ class LogMessageCapture
         config.AddTarget("debugger", target);
         LogManager.Configuration = config;
 
-        NLogConfigurator.Configure();
     }
 }

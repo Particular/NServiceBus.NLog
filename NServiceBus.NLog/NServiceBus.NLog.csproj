@@ -44,7 +44,7 @@
     </Reference>
     <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NServiceBus.5.0.0-beta0001\lib\net45\NServiceBus.Core.dll</HintPath>
+      <HintPath>..\packages\NServiceBus.5.0.0-beta0002\lib\net45\NServiceBus.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,7 +57,7 @@
   <ItemGroup>
     <Compile Include="LoggerFactory.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="NLogConfigurator.cs" />
+    <Compile Include="NLogFactory.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,10 +81,10 @@
     <Copy SourceFiles="$(OutputPath)NServiceBus.NLog.pdb" DestinationFolder="$(SolutionDir)NuGetBuild\Lib\NET45" />
     <Copy SourceFiles="$(OutputPath)NServiceBus.NLog.xml" DestinationFolder="$(SolutionDir)NuGetBuild\Lib\NET45" />
     <Copy SourceFiles="$(ProjectDir)NServiceBus.NLog.nuspec" DestinationFolder="$(SolutionDir)NuGetBuild" />
-    <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuild"  Version="$(GfvLegacySemVerPadded)" />
+    <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuild" Version="$(GfvLegacySemVerPadded)" />
     <Copy SourceFiles="$(ProjectDir)LoggerFactory.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\LoggerFactory.cs.pp" />
     <Copy SourceFiles="$(ProjectDir)Logger.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\Logger.cs.pp" />
-    <Copy SourceFiles="$(ProjectDir)NLogConfigurator.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\NLogConfigurator.cs.pp" />
+    <Copy SourceFiles="$(ProjectDir)NLogFactory.cs" DestinationFiles="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\NLogFactory.cs.pp" />
     <ItemGroup>
       <CsFiles Include="$(SolutionDir)NuGetBuildCodeOnly\Content\NServiceBusNLog\*.cs.pp" />
     </ItemGroup>

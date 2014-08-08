@@ -1,6 +1,7 @@
 using System;
 using System.ServiceProcess;
 using NServiceBus;
+using NServiceBus.Logging;
 using NServiceBus.Persistence;
 
 class ProgramService : ServiceBase
@@ -8,11 +9,15 @@ class ProgramService : ServiceBase
     static void Main()
     {
         LoggingConfig.ConfigureNLog();
+        LogManager.Use<NLogFactory>();
 
-        var configure = Configure.With(builder => builder.EndpointName(() => "SelfHost"));
-        configure.UseSerialization<Json>();
+        var configure = Configure.With(b => {
+            {
+                b.EndpointName("SelfHost");
+                b.UseSerialization<Json>();
+                b.EnableInstallers();
+            } });
         configure.UsePersistence<InMemory>();
-        configure.EnableInstallers();
 
         using (var bus = configure.CreateBus())
         {

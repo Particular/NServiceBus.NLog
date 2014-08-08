@@ -1,4 +1,5 @@
 ﻿using NServiceBus;
+using NServiceBus.Logging;
 using NServiceBus.Persistence;
 using NUnit.Framework;
 
@@ -9,11 +10,15 @@ public class IntegrationTests
     public void Ensure_log_messages_are_redirected()
     {
         LogMessageCapture.CaptureLogMessages();
+        LogManager.Use<NLogFactory>();
 
-        var configure = Configure.With(b => b.EndpointName(() => "NLogTests"));
-        configure.UseSerialization<Json>();
+        var configure = Configure.With(b =>
+        {
+            b.EndpointName("NLogTests");
+            b.UseSerialization<Json>();
+            b.EnableInstallers();
+        });
         configure.UsePersistence<InMemory>();
-        configure.EnableInstallers();
 
         using (var bus = configure.CreateBus())
         {

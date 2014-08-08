@@ -1,7 +1,6 @@
 ﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
-using NServiceBus.NLog;
 
 public class LoggingConfig
 {
@@ -32,6 +31,5 @@ public class LoggingConfig
 
         LogManager.Configuration = config;
 
-        NLogConfigurator.Configure();
     }
 }

@@ -1,8 +1,8 @@
-﻿namespace NServiceBus.NLog
+﻿namespace NServiceBusNLog
 {
     using System;
-    using Logging;
-    using NlogLogManager = global::NLog.LogManager;
+    using NServiceBus.Logging;
+    using NlogLogManager = NLog.LogManager;
 
     class LoggerFactory : ILoggerFactory
     {
