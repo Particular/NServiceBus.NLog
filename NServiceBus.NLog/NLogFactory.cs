@@ -12,7 +12,7 @@
         /// <summary>
         /// <see cref="LoggingFactoryDefinition.GetLoggingFactory"/>.
         /// </summary>
-        public override ILoggerFactory GetLoggingFactory()
+        protected override ILoggerFactory GetLoggingFactory()
         {
             return new LoggerFactory();
         }

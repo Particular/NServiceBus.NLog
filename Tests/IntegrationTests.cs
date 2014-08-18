@@ -17,8 +17,8 @@ public class IntegrationTests
             b.EndpointName("NLogTests");
             b.UseSerialization<Json>();
             b.EnableInstallers();
+            b.UsePersistence<InMemory>();
         });
-        configure.UsePersistence<InMemory>();
 
         using (var bus = configure.CreateBus())
         {

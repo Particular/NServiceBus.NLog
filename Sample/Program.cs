@@ -16,8 +16,8 @@ class ProgramService : ServiceBase
                 b.EndpointName("SelfHost");
                 b.UseSerialization<Json>();
                 b.EnableInstallers();
+                b.UsePersistence<InMemory>();
             } });
-        configure.UsePersistence<InMemory>();
 
         using (var bus = configure.CreateBus())
         {
