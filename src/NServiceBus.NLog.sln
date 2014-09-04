@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.NLog", "NServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{451D43A1-F34E-4602-BE3F-573DE833C105}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.NLog.Tests", "NServiceBus.NLog.Tests\NServiceBus.NLog.Tests.csproj", "{451D43A1-F34E-4602-BE3F-573DE833C105}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B25FABB1-B408-4FF6-ADF8-3F8CC7342318}"
 	ProjectSection(SolutionItems) = preProject

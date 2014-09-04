@@ -7,8 +7,8 @@
     <ProjectGuid>{451D43A1-F34E-4602-BE3F-573DE833C105}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
+    <RootNamespace>NServiceBus.NLog.Tests</RootNamespace>
+    <AssemblyName>NServiceBus.NLog.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
