@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NServiceBus.NLog</name>
+    </assembly>
+    <members>
+        <member name="T:NServiceBus.NLogFactory">
+            <summary>
+            Configure NServiceBus logging messages to use NLog. User by calling LogManager.UseLogging&lt;NLog&gt;.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.NLogFactory.GetLoggingFactory">
+            <summary>
+            <see cref="M:NServiceBus.Logging.LoggingFactoryDefinition.GetLoggingFactory"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

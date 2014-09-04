@@ -1,6 +1,5 @@
 ﻿using NServiceBus;
 using NServiceBus.Logging;
-using NServiceBus.Persistence;
 using NUnit.Framework;
 
 [TestFixture]
@@ -12,15 +11,13 @@ public class IntegrationTests
         LogMessageCapture.CaptureLogMessages();
         LogManager.Use<NLogFactory>();
 
-        var configure = Configure.With(b =>
-        {
-            b.EndpointName("NLogTests");
-            b.UseSerialization<Json>();
-            b.EnableInstallers();
-            b.UsePersistence<InMemory>();
-        });
+        var busConfig = new BusConfiguration();
+        busConfig.EndpointName("NLogTests");
+        busConfig.UseSerialization<JsonSerializer>();
+        busConfig.EnableInstallers();
+        busConfig.UsePersistence<InMemoryPersistence>();
 
-        using (var bus = configure.CreateBus())
+        using (var bus = Bus.Create(busConfig))
         {
             bus.Start();
             Assert.IsNotEmpty(LogMessageCapture.Messages);
