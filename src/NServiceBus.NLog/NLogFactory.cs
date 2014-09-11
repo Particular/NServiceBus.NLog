@@ -4,7 +4,7 @@
     using NServiceBusNLog;
 
     /// <summary>
-    /// Configure NServiceBus logging messages to use NLog. User by calling LogManager.UseLogging&lt;NLog&gt;.
+    /// Configure NServiceBus logging messages to use NLog.  Use by calling <see cref="LogManager.Use{T}"/> the T is <see cref="NLogFactory"/>.
     /// </summary>
     public class NLogFactory : LoggingFactoryDefinition
     {
