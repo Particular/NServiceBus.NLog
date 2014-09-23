@@ -5,6 +5,7 @@
     <title>NServiceBus NLog</title>
     <version>$version$</version>
     <authors>NServiceBus Ltd</authors>
+    <owners>NServiceBus Ltd</owners>
     <licenseUrl>http://particular.net/LicenseAgreement</licenseUrl>
     <projectUrl>http://particular.net/</projectUrl>
     <iconUrl>http://s3.amazonaws.com/nuget.images/NServiceBus_32.png</iconUrl>
@@ -20,6 +21,5 @@
   </metadata>
   <files>
     <file src="..\..\binaries\NServiceBus.NLog.???" target="lib\net45" />
-    <file src="..\..\src\NServiceBus.NLog\**\*.cs" exclude="..\..\src\NServiceBus.NLog\**\TemporaryGeneratedFile_*.cs" target="src" />
   </files>
 </package>
