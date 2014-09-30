@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="ConfigErrorQueue.cs" />
     <Compile Include="LoggingConfig.cs" />
-    <Compile Include="MessageStarter.cs" />
     <Compile Include="MyHandler.cs" />
     <Compile Include="MyMessage.cs" />
     <Compile Include="Program.cs">
