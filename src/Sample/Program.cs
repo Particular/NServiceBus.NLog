@@ -1,9 +1,8 @@
 using System;
-using System.ServiceProcess;
 using NServiceBus;
 using NServiceBus.Logging;
 
-class ProgramService : ServiceBase
+class Program 
 {
     static void Main()
     {
