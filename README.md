@@ -3,5 +3,4 @@ NServiceBus.NLog
 
 Logging support for NServiceBus
 
-NOT READY FOR PRODUCTION
-=======================
+http://docs.particular.net/nservicebus/logging/#nlog
