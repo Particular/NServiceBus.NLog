@@ -19,7 +19,7 @@
 
         public void Debug(string message, Exception exception)
         {
-            logger.Debug(message, exception);
+            logger.Debug(exception, message);
         }
 
         public void DebugFormat(string format, params object[] args)
@@ -34,7 +34,7 @@
 
         public void Info(string message, Exception exception)
         {
-            logger.Info(message, exception);
+            logger.Info(exception, message);
         }
 
         public void InfoFormat(string format, params object[] args)
@@ -49,7 +49,7 @@
 
         public void Warn(string message, Exception exception)
         {
-            logger.Warn(message, exception);
+            logger.Warn(exception, message);
         }
 
         public void WarnFormat(string format, params object[] args)
@@ -64,7 +64,7 @@
 
         public void Error(string message, Exception exception)
         {
-            logger.Error(message, exception);
+            logger.Error(exception, message);
         }
 
         public void ErrorFormat(string format, params object[] args)
@@ -79,7 +79,7 @@
 
         public void Fatal(string message, Exception exception)
         {
-            logger.Fatal(message, exception);
+            logger.Fatal(exception, message);
         }
 
         public void FatalFormat(string format, params object[] args)
