@@ -8,7 +8,7 @@
     <owners>$owners$</owners>
     <licenseUrl>$licenseUrl$</licenseUrl>
     <projectUrl>$projectUrl$</projectUrl>
-    <iconUrl>http://s3.amazonaws.com/nuget.images/NServiceBus_32.png</iconUrl>
+    <iconUrl>$iconUrl$</iconUrl>
     <requireLicenseAcceptance>$requireLicenseAcceptance$</requireLicenseAcceptance>
     <description>NLog support for NServicebus</description>
     <releaseNotes></releaseNotes>
@@ -20,6 +20,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\binaries\NServiceBus.NLog.???" target="lib\net45" />
+    <file src="..\..\binaries\NServiceBus.NLog.???" target="lib\net451" />
   </files>
 </package>
