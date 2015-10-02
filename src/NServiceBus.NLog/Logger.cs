@@ -87,29 +87,10 @@
             logger.Fatal(format, args);
         }
 
-        public bool IsDebugEnabled
-        {
-            get { return logger.IsDebugEnabled; }
-        }
-
-        public bool IsInfoEnabled
-        {
-            get { return logger.IsInfoEnabled; }
-        }
-
-        public bool IsWarnEnabled
-        {
-            get { return logger.IsWarnEnabled; }
-        }
-
-        public bool IsErrorEnabled
-        {
-            get { return logger.IsErrorEnabled; }
-        }
-
-        public bool IsFatalEnabled
-        {
-            get { return logger.IsFatalEnabled; }
-        }
+        public bool IsDebugEnabled => logger.IsDebugEnabled;
+        public bool IsInfoEnabled => logger.IsInfoEnabled;
+        public bool IsWarnEnabled => logger.IsWarnEnabled;
+        public bool IsErrorEnabled => logger.IsErrorEnabled;
+        public bool IsFatalEnabled => logger.IsFatalEnabled;
     }
 }
