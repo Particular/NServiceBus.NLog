@@ -1,4 +1,5 @@
-﻿using NServiceBus;
+﻿using System.Threading.Tasks;
+using NServiceBus;
 using NServiceBus.Logging;
 using NUnit.Framework;
 
@@ -6,21 +7,25 @@ using NUnit.Framework;
 public class IntegrationTests
 {
     [Test]
-    public void Ensure_log_messages_are_redirected()
+    public async Task Ensure_log_messages_are_redirected()
     {
         LogMessageCapture.CaptureLogMessages();
         LogManager.Use<NLogFactory>();
 
-        var busConfig = new BusConfiguration();
-        busConfig.EndpointName("NLogTests");
-        busConfig.UseSerialization<JsonSerializer>();
-        busConfig.EnableInstallers();
-        busConfig.UsePersistence<InMemoryPersistence>();
+        var endpointConfiguration = new EndpointConfiguration("NLogTests");
+        endpointConfiguration.UseSerialization<JsonSerializer>();
+        endpointConfiguration.EnableInstallers();
+        endpointConfiguration.SendFailedMessagesTo("error");
+        endpointConfiguration.UsePersistence<InMemoryPersistence>();
 
-        using (var bus = Bus.Create(busConfig))
+        var endpoint = await Endpoint.Start(endpointConfiguration);
+        try
         {
-            bus.Start();
-            Assert.IsNotEmpty(LogMessageCapture.Messages);
+            Assert.IsNotEmpty(LogMessageCapture.LoggingEvents);
+        }
+        finally
+        {
+            await endpoint.Stop();
         }
     }
 }
