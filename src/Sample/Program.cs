@@ -1,25 +1,35 @@
 using System;
+using System.Threading.Tasks;
 using NServiceBus;
 using NServiceBus.Logging;
 
-class Program 
+class Program
 {
     static void Main()
+    {
+        AsyncMain().GetAwaiter().GetResult();
+    }
+
+    static async Task AsyncMain()
     {
         LoggingConfig.ConfigureNLog();
         LogManager.Use<NLogFactory>();
 
-        var busConfig = new BusConfiguration();
-        busConfig.EndpointName("NLogSample");
-        busConfig.UseSerialization<JsonSerializer>();
-        busConfig.EnableInstallers();
-        busConfig.UsePersistence<InMemoryPersistence>();
-        using (var bus = Bus.Create(busConfig))
+        var endpointConfiguration = new EndpointConfiguration("NLogSample");
+        endpointConfiguration.UseSerialization<JsonSerializer>();
+        endpointConfiguration.EnableInstallers();
+        endpointConfiguration.SendFailedMessagesTo("error");
+        endpointConfiguration.UsePersistence<InMemoryPersistence>();
+        var endpoint = await Endpoint.Start(endpointConfiguration);
+        try
         {
-            bus.Start();
-            bus.SendLocal(new MyMessage());
-            Console.WriteLine("\r\nPress any key to stop program\r\n");
-            Console.Read();
+            await endpoint.SendLocal(new MyMessage());
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
+        }
+        finally
+        {
+            await endpoint.Stop();
         }
 
     }
