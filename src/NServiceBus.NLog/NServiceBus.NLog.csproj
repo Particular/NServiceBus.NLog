@@ -65,6 +65,9 @@
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\GitVersionConfig.yaml">
+      <Link>GitVersionConfig.yaml</Link>
+    </None>
     <None Include="..\..\packaging\nuget\NServiceBus.NLog.nuspec">
       <Link>NServiceBus.NLog.nuspec</Link>
     </None>
