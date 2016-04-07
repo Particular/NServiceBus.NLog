@@ -1,5 +1,1 @@
 assembly-versioning-scheme: Major
-next-version: 1.2
-branches:
- develop:
-   tag: beta
