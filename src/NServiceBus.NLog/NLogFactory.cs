@@ -1,7 +1,6 @@
-﻿namespace NServiceBus
+﻿namespace NServiceBusNLog
 {
-    using Logging;
-    using NServiceBusNLog;
+    using NServiceBus.Logging;
 
     /// <summary>
     /// Configure NServiceBus logging messages to use NLog.  Use by calling <see cref="LogManager.Use{T}"/> the T is <see cref="NLogFactory"/>.
