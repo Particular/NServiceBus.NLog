@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using ApiApprover;
 using ApprovalTests;
 using Mono.Cecil;
-using NServiceBusNLog;
+using NServiceBus;
 using NUnit.Framework;
 
 [TestFixture]
