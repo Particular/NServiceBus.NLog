@@ -1,13 +1,13 @@
-﻿namespace NServiceBusNLog
+﻿namespace NServiceBus.Logging.NLog
 {
     using System;
-    using NServiceBus.Logging;
+    using Logging;
 
     class Logger : ILog
     {
-        NLog.Logger logger;
+        global::NLog.Logger logger;
 
-        public Logger(NLog.Logger logger)
+        public Logger(global::NLog.Logger logger)
         {
             this.logger = logger;
         }
