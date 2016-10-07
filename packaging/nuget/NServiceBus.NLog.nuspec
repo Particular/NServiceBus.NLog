@@ -10,12 +10,12 @@
     <projectUrl>$projectUrl$</projectUrl>
     <iconUrl>$iconUrl$</iconUrl>
     <requireLicenseAcceptance>$requireLicenseAcceptance$</requireLicenseAcceptance>
-    <description>NLog support for NServicebus</description>
+    <description>NLog support for NServiceBus</description>
     <releaseNotes></releaseNotes>
     <copyright>$copyright$</copyright>
-    <tags>nservicebus servicebus msmq cqrs publish subscribe nlog</tags>
+    <tags>NServiceBus logging nlog</tags>
     <dependencies>
-      <dependency id="NServiceBus" version="[6.0.0-rc0001, 7.0.0)" />
+      <dependency id="NServiceBus" version="[6.0., 7.0.0)" />
       <dependency id="NLog" version="[4.0.0, 5.0.0)" />
     </dependencies>
   </metadata>
