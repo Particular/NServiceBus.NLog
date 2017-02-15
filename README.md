@@ -3,4 +3,4 @@ NServiceBus.NLog
 
 Logging support for NServiceBus
 
-http://docs.particular.net/nservicebus/logging/#nlog
+https://docs.particular.net/nservicebus/logging/nlog
