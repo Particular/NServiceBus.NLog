@@ -1,18 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.NLog", "NServiceBus.NLog\NServiceBus.NLog.csproj", "{E21E4D64-7077-4D6C-81F3-2B6E5CAB9EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.NLog", "NServiceBus.NLog\NServiceBus.NLog.csproj", "{E21E4D64-7077-4D6C-81F3-2B6E5CAB9EB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.NLog.Tests", "NServiceBus.NLog.Tests\NServiceBus.NLog.Tests.csproj", "{451D43A1-F34E-4602-BE3F-573DE833C105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.NLog.Tests", "NServiceBus.NLog.Tests\NServiceBus.NLog.Tests.csproj", "{451D43A1-F34E-4602-BE3F-573DE833C105}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B25FABB1-B408-4FF6-ADF8-3F8CC7342318}"
 	ProjectSection(SolutionItems) = preProject
 		..\GitVersion.yml = ..\GitVersion.yml
-		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Global
