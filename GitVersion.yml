@@ -3,3 +3,5 @@ next-version: 2.1
 branches:
   develop:
     tag: alpha
+  release:
+    tag: rc
