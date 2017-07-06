@@ -16,7 +16,7 @@
     <tags>NServiceBus logging nlog</tags>
     <dependencies>
       <dependency id="NServiceBus" version="[6.0.0, 7.0.0)" />
-      <dependency id="NLog" version="[4.0.0, 5.0.0)" />
+      <dependency id="NLog" version="[5.0.0-beta09, 6.0.0)" />
     </dependencies>
   </metadata>
   <files>
