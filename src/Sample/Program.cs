@@ -18,6 +18,7 @@ class Program
         var endpointConfiguration = new EndpointConfiguration("NLogSample");
         endpointConfiguration.UseSerialization<JsonSerializer>();
         endpointConfiguration.EnableInstallers();
+        endpointConfiguration.UseTransport<LearningTransport>();
         endpointConfiguration.SendFailedMessagesTo("error");
         endpointConfiguration.UsePersistence<InMemoryPersistence>();
         var endpoint = await Endpoint.Start(endpointConfiguration);

@@ -16,7 +16,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NLog" Version="5.0.0-beta09" />
-    <PackageReference Include="NServiceBus" Version="6.3.3" />
+    <PackageReference Include="NServiceBus" Version="7.0.0-alpha0031" />
     <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012" />
     <PackageReference Include="NuGetPackager" Version="0.6.5" />
     <None Include="..\..\GitVersion.yml" Link="GitVersion.yml" />
