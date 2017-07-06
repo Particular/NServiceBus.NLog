@@ -15,6 +15,7 @@ public class IntegrationTests
         var endpointConfiguration = new EndpointConfiguration("NLogTests");
         endpointConfiguration.UseSerialization<JsonSerializer>();
         endpointConfiguration.EnableInstallers();
+        endpointConfiguration.UseTransport<LearningTransport>();
         endpointConfiguration.SendFailedMessagesTo("error");
         endpointConfiguration.UsePersistence<InMemoryPersistence>();
 

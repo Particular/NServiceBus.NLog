@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NLog" Version="5.0.0-beta09" />
-    <PackageReference Include="NServiceBus" Version="6.3.3" />
+    <PackageReference Include="NServiceBus" Version="7.0.0-alpha0031" />
     <ProjectReference Include="..\NServiceBus.NLog\NServiceBus.NLog.csproj" />
   </ItemGroup>
 </Project>
