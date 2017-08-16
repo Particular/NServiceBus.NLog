@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
-    <AssemblyName>NServiceBus.NLog</AssemblyName>
+    <TargetFrameworks>net452</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)NServiceBus.snk</AssemblyOriginatorKeyFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -30,7 +29,7 @@
     </ItemGroup>
   </Target>
   <ItemGroup>
-    <PackageReference Include="NLog" Version="[5.0.0-*, 6.0.0)" />
+    <PackageReference Include="NLog" Version="[4.0.0, 5.0.0)" />
     <PackageReference Include="NServiceBus" Version="[7.0.0-*, 8.0.0)" />
     <PackageReference Include="GitVersionTask" Version="4.0.0-*" PrivateAssets="All" />
     <None Include="..\..\GitVersion.yml" Link="GitVersion.yml" />
