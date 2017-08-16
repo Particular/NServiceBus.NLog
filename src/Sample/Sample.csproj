@@ -6,6 +6,8 @@
     <DebugSymbols>True</DebugSymbols>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <OutputType>Exe</OutputType>
+    <WarningsAsErrors />
+    <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\NServiceBus.NLog\NServiceBus.NLog.csproj" />

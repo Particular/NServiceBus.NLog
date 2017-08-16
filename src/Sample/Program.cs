@@ -16,7 +16,6 @@ class Program
         LogManager.Use<NLogFactory>();
 
         var endpointConfiguration = new EndpointConfiguration("NLogSample");
-        endpointConfiguration.UseSerialization<JsonSerializer>();
         endpointConfiguration.EnableInstallers();
         endpointConfiguration.UseTransport<LearningTransport>();
         endpointConfiguration.SendFailedMessagesTo("error");
