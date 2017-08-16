@@ -1,25 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net452;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
     <AssemblyName>NServiceBus.NLog</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)NServiceBus.snk</AssemblyOriginatorKeyFile>
-    <DebugType>full</DebugType>
-    <DebugSymbols>True</DebugSymbols>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <OutputPath>..\..\binaries\</OutputPath>
     <NoWarn>CS0419</NoWarn>
     <UpdateAssemblyInfo>true</UpdateAssemblyInfo>
+    <Description>NLog support for NServiceBus</Description>
   </PropertyGroup>
+  <PropertyGroup>
+    <Authors>NServiceBus Ltd</Authors>
+    <Company>NServiceBus Ltd</Company>
+    <PackageLicenseUrl>http://particular.net/LicenseAgreement</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright 2010-$([System.DateTime]::UtcNow.ToString(yyyy)) NServiceBus. All rights reserved</Copyright>
+    <PackageTags>NServiceBus logging nlog</PackageTags>
+    <PackageIconUrl>http://s3.amazonaws.com/nuget.images/NServiceBus_32.png</PackageIconUrl>
+    <PackageProjectUrl>https://docs.particular.net/nuget/$(PackageId)</PackageProjectUrl>
+    <PackageOutputPath>..\..\nugets</PackageOutputPath>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);IncludePDBsInPackage</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+  <Target Name="IncludePDBsInPackage" Condition="'$(IncludeBuildOutput)' != 'false'">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)\$(AssemblyName).pdb" PackagePath="lib/$(TargetFramework)" />
+    </ItemGroup>
+  </Target>
   <ItemGroup>
-    <PackageReference Include="NLog" Version="5.0.0-beta09" />
-    <PackageReference Include="NServiceBus" Version="7.0.0-alpha0031" />
-    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012" />
-    <PackageReference Include="NuGetPackager" Version="0.6.5" />
+    <PackageReference Include="NLog" Version="[5.0.0-*, 6.0.0)" />
+    <PackageReference Include="NServiceBus" Version="[7.0.0-*, 8.0.0)" />
+    <PackageReference Include="GitVersionTask" Version="4.0.0-*" PrivateAssets="All" />
     <None Include="..\..\GitVersion.yml" Link="GitVersion.yml" />
-    <None Include="..\..\packaging\nuget\NServiceBus.NLog.nuspec" Link="NServiceBus.NLog.nuspec" />
   </ItemGroup>
 </Project>
