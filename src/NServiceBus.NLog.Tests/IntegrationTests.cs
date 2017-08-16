@@ -13,7 +13,6 @@ public class IntegrationTests
         LogManager.Use<NLogFactory>();
 
         var endpointConfiguration = new EndpointConfiguration("NLogTests");
-        endpointConfiguration.UseSerialization<JsonSerializer>();
         endpointConfiguration.EnableInstallers();
         endpointConfiguration.UseTransport<LearningTransport>();
         endpointConfiguration.SendFailedMessagesTo("error");

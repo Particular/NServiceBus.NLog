@@ -3,15 +3,13 @@
   <PropertyGroup>
     <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
     <AssemblyName>NServiceBus.NLog</AssemblyName>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)NServiceBus.snk</AssemblyOriginatorKeyFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <OutputPath>..\..\binaries\</OutputPath>
     <NoWarn>CS0419</NoWarn>
-    <UpdateAssemblyInfo>true</UpdateAssemblyInfo>
     <Description>NLog support for NServiceBus</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>NServiceBus Ltd</Authors>
