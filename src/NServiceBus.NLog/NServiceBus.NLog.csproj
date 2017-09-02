@@ -4,34 +4,17 @@
     <TargetFrameworks>net452</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)NServiceBus.snk</AssemblyOriginatorKeyFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>CS0419</NoWarn>
-    <Description>NLog support for NServiceBus</Description>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <PropertyGroup>
-    <Authors>NServiceBus Ltd</Authors>
-    <Company>NServiceBus Ltd</Company>
-    <PackageLicenseUrl>http://particular.net/LicenseAgreement</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Copyright>Copyright 2010-$([System.DateTime]::UtcNow.ToString(yyyy)) NServiceBus. All rights reserved</Copyright>
+    <Description>NLog support for NServiceBus</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>NServiceBus logging nlog</PackageTags>
-    <PackageIconUrl>http://s3.amazonaws.com/nuget.images/NServiceBus_32.png</PackageIconUrl>
-    <PackageProjectUrl>https://docs.particular.net/nuget/$(PackageId)</PackageProjectUrl>
-    <PackageOutputPath>..\..\nugets</PackageOutputPath>
-    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);IncludePDBsInPackage</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
-
-  <Target Name="IncludePDBsInPackage" Condition="'$(IncludeBuildOutput)' != 'false'">
-    <ItemGroup>
-      <TfmSpecificPackageFile Include="$(OutputPath)\$(AssemblyName).pdb" PackagePath="lib/$(TargetFramework)" />
-    </ItemGroup>
-  </Target>
   <ItemGroup>
     <PackageReference Include="NLog" Version="[4.0.0, 5.0.0)" />
     <PackageReference Include="NServiceBus" Version="[7.0.0-*, 8.0.0)" />
-    <PackageReference Include="GitVersionTask" Version="4.0.0-*" PrivateAssets="All" />
     <None Include="..\..\GitVersion.yml" Link="GitVersion.yml" />
   </ItemGroup>
 </Project>
