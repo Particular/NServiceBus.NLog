@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.NLog", "NServic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "Sample\Sample.csproj", "{A2B73F45-B06F-4D97-A6D3-F02669FE8F1B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.NLog.Tests", "NServiceBus.NLog.Tests\NServiceBus.NLog.Tests.csproj", "{451D43A1-F34E-4602-BE3F-573DE833C105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{451D43A1-F34E-4602-BE3F-573DE833C105}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
