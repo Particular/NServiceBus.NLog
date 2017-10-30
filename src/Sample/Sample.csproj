@@ -1,11 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFrameworks>net452</TargetFrameworks>
+    <TargetFramework>net452</TargetFramework>
     <OutputType>Exe</OutputType>
-    <NoWarn>NU1605</NoWarn>
   </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\NServiceBus.NLog\NServiceBus.NLog.csproj" />
   </ItemGroup>
+
 </Project>
