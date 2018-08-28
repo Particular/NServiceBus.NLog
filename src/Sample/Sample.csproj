@@ -9,4 +9,8 @@
     <ProjectReference Include="..\NServiceBus.NLog\NServiceBus.NLog.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NServiceBus" Version="7.1.0" />
+  </ItemGroup>
+
 </Project>
