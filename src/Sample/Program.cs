@@ -8,7 +8,9 @@ class Program
     static async Task Main()
     {
         LoggingConfig.ConfigureNLog();
+#pragma warning disable 0618
         LogManager.Use<NLogFactory>();
+#pragma warning restore 0618
 
         var configuration = new EndpointConfiguration("NLogSample");
         configuration.EnableInstallers();

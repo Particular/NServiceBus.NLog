@@ -1,5 +1,6 @@
 namespace NServiceBus
 {
+    [System.ObsoleteAttribute(@"Support for external logging providers is no longer provided by NServiceBus providers for each logging framework. Instead, the NServiceBus.Extensions.Logging library provides the ability to use any logging provider that conforms to the Microsoft.Extensions.Logging abstraction. Will be treated as an error from version 4.0.0. Will be removed in version 5.0.0.", false)]
     public class NLogFactory : NServiceBus.Logging.LoggingFactoryDefinition
     {
         public NLogFactory() { }
