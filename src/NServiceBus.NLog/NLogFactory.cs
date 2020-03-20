@@ -7,7 +7,7 @@
     /// Configure NServiceBus logging messages to use NLog.  Use by calling <see cref="LogManager.Use{T}"/> the T is <see cref="NLogFactory"/>.
     /// </summary>
     [ObsoleteEx(
-        Message = "Support for external logging providers is no longer provided by NServiceBus providers for each logging framework. Instead, the NServiceBus.Extensions.Logging library provides the ability to use any logging provider that conforms to the Microsoft.Extensions.Logging abstraction.",
+        Message = "NServiceBus is now providing support for logging libraries through the Microsoft.Extensions.Logging abstraction. Remove the NServiceBus.NLog package. Install the NServiceBus.Extensions.Logging and NLog.Extensions.Logging packages instead.",
         RemoveInVersion = "5.0.0",
         TreatAsErrorFromVersion = "4.0.0")]
     public class NLogFactory : LoggingFactoryDefinition
