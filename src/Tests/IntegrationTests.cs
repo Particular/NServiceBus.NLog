@@ -10,7 +10,9 @@ public class IntegrationTests
     public async Task Ensure_log_messages_are_redirected()
     {
         LogMessageCapture.CaptureLogMessages();
+#pragma warning disable 0618
         LogManager.Use<NLogFactory>();
+#pragma warning restore 0618
 
         var endpointConfiguration = new EndpointConfiguration("NLogTests");
         endpointConfiguration.EnableInstallers();
