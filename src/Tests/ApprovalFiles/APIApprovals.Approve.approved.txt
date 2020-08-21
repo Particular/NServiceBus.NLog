@@ -1,9 +1,0 @@
-namespace NServiceBus
-{
-    [System.ObsoleteAttribute(@"NServiceBus is now providing support for logging libraries through the Microsoft.Extensions.Logging abstraction. Remove the NServiceBus.NLog package. Install the NServiceBus.Extensions.Logging and NLog.Extensions.Logging packages instead. Will be treated as an error from version 4.0.0. Will be removed in version 5.0.0.", false)]
-    public class NLogFactory : NServiceBus.Logging.LoggingFactoryDefinition
-    {
-        public NLogFactory() { }
-        protected override NServiceBus.Logging.ILoggerFactory GetLoggingFactory() { }
-    }
-}
