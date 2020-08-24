@@ -17,7 +17,7 @@
         /// </summary>
         protected override ILoggerFactory GetLoggingFactory()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("NServiceBus is now providing support for logging libraries through the Microsoft.Extensions.Logging abstraction. Remove the NServiceBus.NLog package. Install the NServiceBus.Extensions.Logging and NLog.Extensions.Logging packages instead.");
         }
     }
 }
