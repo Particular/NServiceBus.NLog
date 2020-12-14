@@ -9,7 +9,10 @@ public class APIApprovals
     [Test]
     public void Approve()
     {
-        var publicApi = ApiGenerator.GeneratePublicApi(Assembly.Load("NServiceBus.NLog"), excludeAttributes: new[] { "System.Runtime.Versioning.TargetFrameworkAttribute" });
+        var publicApi = Assembly.Load("NServiceBus.NLog").GeneratePublicApi(new ApiGeneratorOptions
+        {
+            ExcludeAttributes = new[] { "System.Runtime.Versioning.TargetFrameworkAttribute", "System.Reflection.AssemblyMetadataAttribute" }
+        });
         Approver.Verify(publicApi);
     }
 }
