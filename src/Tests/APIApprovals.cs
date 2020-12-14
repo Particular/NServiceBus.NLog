@@ -10,7 +10,7 @@ public class APIApprovals
     public void Approve()
     {
 #pragma warning disable 0618
-        var publicApi = ApiGenerator.GeneratePublicApi(typeof(NLogFactory).Assembly, excludeAttributes: new[] { "System.Runtime.Versioning.TargetFrameworkAttribute" });
+        var publicApi = ApiGenerator.GeneratePublicApi(typeof(NLogFactory).Assembly, excludeAttributes: new[] { "System.Runtime.Versioning.TargetFrameworkAttribute", "System.Reflection.AssemblyMetadataAttribute" });
 #pragma warning restore 0618
         Approver.Verify(publicApi);
     }
